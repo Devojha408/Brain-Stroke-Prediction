@@ -26,6 +26,7 @@ def result():
         kn=pickle.load(f)
     pred=kn.predict(X)
 
+
     # for No Stroke Risk
     if pred==0:
         return render_template('nostroke.html')

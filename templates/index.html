@@ -8,7 +8,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <title style="color: rgb(64, 228, 192);" >Home</title>
+  <title style="color: rgb(64, 228, 192);">Home</title>
 </head>
 
 <nav class="navbar navbar-dark bg-info navbar-fixed-top">
@@ -42,7 +42,11 @@
               <label for="gender">Gender</label>
             </div>
             <div class="col-lg-8 col-md-8">
-              <input type="text" class="form-control" id="gender" name="gender" placeholder="0 for Female, 1 for Male, 3 for Others" required>
+              <select name="gender" id="gender" class="form-control" required>
+                <option value="0">Female</option>
+                <option value="1">Male</option>
+                <option value="3">Other</option>
+              </select>
             </div>
           </div>
           <br>
@@ -62,8 +66,10 @@
               <label for="hypertension">Hypertension </label>
             </div>
             <div class="col-lg-8 col-md-8">
-              <input type="text" class="form-control" id="hypertension" name="hypertension"
-                placeholder="1 for Yes, 0 for No" required>
+              <select name="hypertension" id="hypertension" class="form-control" required>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+              </select>
             </div>
           </div>
           <br>
@@ -72,8 +78,10 @@
               <label for="heart_disease">Heart Disease </label>
             </div>
             <div class="col-lg-8 col-md-8">
-              <input type="text" class="form-control" id="heart_disease" name="heart_disease"
-                placeholder="1 for Yes, 0 for No" required>
+              <select name="heart_disease" id="heart_disease" class="form-control" required>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+              </select>
             </div>
           </div>
           <br>
@@ -82,9 +90,9 @@
               <label for="ever_married">Ever Married</label>
             </div>
             <div class="col-lg-8 col-md-8">
-              <input type="text" class="form-control" id="ever_married" name="ever_married"
-                placeholder="1 for Yes, 0 for No" required>
-
+              <select name="ever_married" id="ever_married" class="form-control" required>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
               </select>
             </div>
           </div>
@@ -94,9 +102,12 @@
               <label for="work_type">Work Type </label>
             </div>
             <div class="col-lg-8 col-md-8">
-              <input type="text" class="form-control" id="work_type" name="work_type"
-                placeholder="0 for Govn Job, 1 for Never_worked, 2 for Private, 3 for Self-employed, 4 for children" required>
-
+              <select name="work_type" id="work_type" class="form-control" required>
+                <option value="0">Government Job</option>
+                <option value="1">Never Worked</option>
+                <option value="2">Private Job</option>
+                <option value="3">Self Employed</option>
+                <option value="4">Student or Minor</option>
               </select>
             </div>
           </div>
@@ -106,8 +117,10 @@
               <label for="Residence_type">Residence Type</label>
             </div>
             <div class="col-lg-8 col-md-8">
-              <input type="text" class="form-control" id="Residence_type" name="Residence_type"
-                placeholder="for Urban 1, for Rural 0" required>
+              <select name="Residence_type" id="Residence_type" class="form-control" required>
+                <option value="1">Urban</option>
+                <option value="0">Rural</option>
+              </select>
             </div>
           </div>
           <br>
@@ -118,7 +131,7 @@
             </div>
             <div class="col-lg-8 col-md-8">
               <input type="text" class="form-control" id="avg_glucose_level" name="avg_glucose_level"
-                placeholder="avg_glucose_level" required>
+                placeholder="Avg Glucose Level" required>
             </div>
           </div>
           <br>
@@ -128,7 +141,7 @@
               <label for="bmi">BMI</label>
             </div>
             <div class="col-lg-8 col-md-8">
-              <input type="text" class="form-control" id="bmi" name="bmi" placeholder="bmi" required>
+              <input type="text" class="form-control" id="bmi" name="bmi" placeholder="BMI" required>
             </div>
           </div>
           <br>
@@ -138,8 +151,12 @@
               <label for="smoking_status">Smoking Status</label>
             </div>
             <div class="col-lg-8 col-md-8">
-              <input type="text" class="form-control" id="smoking_status" name="smoking_status"
-                placeholder="0 for Unknown, 1 for formerly smoked, 2 for never smoked, 3 for smokes" required>
+              <select name="smoking_status" id="smoking_status" class="form-control" required>
+                <option value="0">Unknown</option>
+                <option value="1">Formerly Smoked</option>
+                <option value="2">Never Smoked</option>
+                <option value="3">Smokes</option>
+              </select>
             </div>
           </div>
           <br>
@@ -165,21 +182,28 @@
     crossorigin="anonymous"></script>
 </body>
 <style>
-  .container-fluid input {
+
+.container-fluid input {
     background-color: powderblue;
     border: none;
-    color: white;
   }
+  .container-fluid select {
+    background-color: powderblue;
+    border: none;
+  }
+
   body {
-  background-image: url('static/brainstroke.png');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
   }
-  .container-fluid label{
+
+  .container-fluid label {
     color: powderblue;
   }
-  .container-fluid button{
+
+  .container-fluid button {
     color: powderblue;
     cursor: pointer;
     outline: none;
